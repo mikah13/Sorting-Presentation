@@ -81,6 +81,67 @@ $(document).ready(() => {
         $("#minVal").remove();
         $(".min-number").append('<h2 id="minVal">Min Value: 1</h2>');
     })
+
+    let slide9ListCount = 0;
+    $("#slide9-list").click(function() {
+        if (slide9ListCount === 0) {
+            $("#selection-sort-number1").addClass("selection-sorted");
+            $("#selection-sort-number4").addClass("selection-sorted");
+            slide9ListCount++;
+        } else if (slide9ListCount === 1) {
+            $("#selection-sort-number1").addClass("animated slideOutDown");
+            $("#selection-sort-number4").addClass("animated slideOutUp");
+            slide9ListCount++;
+        } else if (slide9ListCount === 2) {
+            $("#selection-sort-number1").remove();
+            $("#selection-sort-number4").remove();
+            slide9ListCount++;
+        } else if (slide9ListCount === 3) {
+            $("#selection-sort-number2").before('<div id="selection-sort-number1" class="selection-unsorted col-xs-2 selection-sorted animated slideInDown">1</div>');
+            $("#selection-sort-number6").before('<div id="selection-sort-number4" class="selection-unsorted col-xs-2 animated slideInDown">4</div>');
+            slide9ListCount++;
+        } else if (slide9ListCount === 4) {
+            $("#selection-sort-number2").addClass("selection-sorted");
+            slide9ListCount++;
+        } else if (slide9ListCount === 5) {
+            $("#selection-sort-number3").addClass("selection-sorted");
+            $("#selection-sort-number5").addClass("selection-sorted");
+            slide9ListCount++;
+        } else if (slide9ListCount === 6) {
+            $("#selection-sort-number3").addClass("animated slideOutDown");
+            $("#selection-sort-number5").addClass("animated slideOutUp");
+            slide9ListCount++;
+        } else if (slide9ListCount === 7) {
+            $("#selection-sort-number3").remove();
+            $("#selection-sort-number5").remove();
+            slide9ListCount++;
+        } else if (slide9ListCount === 8) {
+            $("#selection-sort-number4").before('<div id="selection-sort-number3" class="selection-unsorted col-xs-2 selection-sorted animated slideInDown">3</div>');
+            $("#selection-sort-number6").after('<div id="selection-sort-number5" class="selection-unsorted col-xs-2 animated slideInDown">5</div>');
+            slide9ListCount++;
+        } else if (slide9ListCount === 9) {
+            $("#selection-sort-number4").addClass("selection-sorted");
+            slide9ListCount++;
+        } else if (slide9ListCount === 10) {
+            $("#selection-sort-number5").addClass("selection-sorted");
+            $("#selection-sort-number6").addClass("selection-sorted");
+            slide9ListCount++;
+        } else if (slide9ListCount === 11) {
+            $("#selection-sort-number5").addClass("animated slideOutDown");
+            $("#selection-sort-number6").addClass("animated slideOutUp");
+            slide9ListCount++;
+        } else if (slide9ListCount === 12) {
+            $("#selection-sort-number5").remove();
+            $("#selection-sort-number6").remove();
+            slide9ListCount++;
+        } else if (slide9ListCount === 13) {
+            $("#selection-sort-number4").after('<div id="selection-sort-number5" class="selection-unsorted col-xs-2 selection-sorted animated slideInDown">5</div>');
+            slide9ListCount++;
+        } else if (slide9ListCount === 14) {
+            $("#selection-sort-number5").after('<div id="selection-sort-number6" class="selection-unsorted col-xs-2 selection-sorted animated slideInDown">6</div>');
+            slide9ListCount++;
+        }
+    })
     let selectionScenario = 0;
     $("#selection-scenario").click(function() {
         if (selectionScenario === 0) {
