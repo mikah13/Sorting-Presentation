@@ -51,7 +51,7 @@ h1 {
     transition: all .3s;
 }
 
-.selection-unsorted ,.bubble-unsorted, .insertion-unsorted {
+.selection-unsorted, .bubble-unsorted, .insertion-unsorted {
     display: inline-block;
     background-color: white;
     height: 200px;
@@ -68,11 +68,13 @@ h1 {
     color: rgb(235, 235, 235);
     border: 5px solid rgb(217, 158, 43);
 }
-.insertion-picked{
+
+.insertion-picked {
     background-color: rgb(175, 158, 165);
     border: 10px solid rgb(93, 238, 221);
     border-radius: 15px;
 }
+
 .sort {
     color: rgb(50, 50, 50);
 }
@@ -109,7 +111,7 @@ img {
 
 .algorithm-steps {
     padding-left: 20%;
-    padding-right:20%;
+    padding-right: 20%;
 }
 
 pre {

@@ -48,6 +48,15 @@ $(document).ready(() => {
         })
 
     })
+    $("#playAll2").click(function() {
+        let array = ["#insertionGif2", "#mergeGif", "#shellGif", "#heapGif"];
+        array.forEach(el => {
+            let src = $(el).attr("src");
+            src = src.split("static-").join('');
+            $(el).attr("src", src);
+
+        })
+    })
     let slide7Count = 0;
     $(".slide7").click(function() {
         if (slide7Count === 0) {
@@ -213,7 +222,6 @@ $(document).ready(() => {
             $("#bubble-sort-number6").before("<div id='bubble-sort-number3' class='bubble-unsorted col-xs-2 animated slideInDown'>3</div>")
             slide10ListCount++;
         }
-
     })
     let bubbleScenario = 0;
     $("#bubble-scenario").click(function() {
@@ -283,7 +291,6 @@ $(document).ready(() => {
             slide11Count++;
         }
     })
-
     let insertionScenario = 0;
     $("#insertion-scenario").click(function() {
         if (insertionScenario === 0) {
